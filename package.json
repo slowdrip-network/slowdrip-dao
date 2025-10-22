@@ -8,7 +8,12 @@
     "test": "hardhat test --reporter=spec",
     "node": "hardhat node",
     "deploy:local": "hardhat run scripts/deploy.local.js",
-    "deploy:sepolia": "hardhat run --network sepolia scripts/deploy.local.js"
+    "deploy:sepolia": "hardhat run --network sepolia scripts/deploy.local.js",
+    "deploy:l1:test": "hardhat run --network sepolia scripts/deploy.l1.cjs",
+    "deploy:l2:op-sep": "hardhat run --network optimismSepolia scripts/deploy.l2.bundle.cjs",
+    "deploy:l2:base-sep": "hardhat run --network baseSepolia scripts/deploy.l2.bundle.cjs",
+    "deploy:l2:arb-sep": "hardhat run --network arbitrumSepolia scripts/deploy.l2.bundle.cjs",
+    "manifest:print": "cat declared-contracts.manifest.test.json"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^6.1.0",
